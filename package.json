@@ -1,0 +1,17 @@
+{
+  "name": "food-app",
+  "version": "1.0.0",
+  "description": "This app is food ordering.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^20.7.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.10.0"
+  }
+}
