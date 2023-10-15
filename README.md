@@ -1,2 +1,2 @@
 # food-app
-This app is food ordering.
+This app is for ordering food.
