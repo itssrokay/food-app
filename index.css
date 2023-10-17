@@ -1,0 +1,19 @@
+*{
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+  margin:10px;
+  border: 1px solid black;
+
+}
+.navbar>ul{
+  list-style-type: none;
+  display: flex;
+}
+.navbar>ul>li{
+  padding: 10px;
+}
+.logo{
+  width: 100px;
+}
