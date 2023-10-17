@@ -1,8 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom";
+
 import Heading from './Heading';
 import Footer from './Footer';
 import Body from './Body';
+
+
 
 // const Body=()=>(
 //   <h1>body</h1>
@@ -33,4 +37,6 @@ const App = () => {
     </>
   );
 };
-ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<App />, document.getElementById('root'));
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
