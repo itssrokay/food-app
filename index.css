@@ -16,3 +16,16 @@
 .logo{
   width: 100px;
 }
+.cards{
+  border: 2px solid black;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+
+}
+.cards>img{
+ width: 100%;
+}
+.dir{
+  display: flex;
+}
