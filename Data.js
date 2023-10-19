@@ -1,9 +1,16 @@
 // RestaurantList is JSON Data for displaying cards
 // const restaurantList =
+import dominos from "./images/dominos.jpeg"
+import second from "./images/OIP.jpeg"
+import third from "./images/pizza pie.jpeg"
+import fourth from "./images/Richie rich.jpeg"
+import fifth from "./images/siddhi icecream.jpeg"
+import kfc from "./images/kfc.jpeg"
 export default [
   {
     type: "restaurant",
     data: {
+      url:dominos,
       type: "F",
       id: "74453",
       name: "Domino's Pizza",
@@ -124,6 +131,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:second,
       type: "F",
       id: "410476",
       name: "The Brooklyn Creamery - Healthy Ice Cream",
@@ -244,6 +252,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:third,
       type: "F",
       id: "81094",
       name: "Richie Rich Juices & Shakes",
@@ -364,6 +373,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:fourth,
       type: "F",
       id: "311443",
       name: "Siddhi Icecream & Thick Shake",
@@ -484,6 +494,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:dominos,
       type: "F",
       id: "307070",
       name: "Pizza Pie",
@@ -604,6 +615,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:fifth,
       type: "F",
       id: "76858",
       name: "Feeling Hungry",
@@ -724,6 +736,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:kfc,
       type: "F",
       id: "617279",
       name: "Malaxmi Fast Food",
@@ -843,6 +856,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:second,
       type: "F",
       id: "469264",
       name: "Dessert House",
@@ -963,6 +977,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:third,
       type: "F",
       id: "395204",
       name: "McDonald's Gourmet Burger Collection",
@@ -1084,6 +1099,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:second,
       type: "F",
       id: "193541",
       name: "Behrouz Biryani",
@@ -1213,6 +1229,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:kfc,
       type: "F",
       id: "475510",
       name: "Momos House",
@@ -1333,6 +1350,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:third,
       type: "F",
       id: "127596",
       name: "Sabir Chicken",
@@ -1453,6 +1471,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:fifth,
       type: "F",
       id: "64656",
       name: "Mahesh Pav Bhaji",
@@ -1573,6 +1592,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:dominos,
       type: "F",
       id: "255204",
       name: "The Dango Cake Shop",
@@ -1692,6 +1712,7 @@ export default [
   {
     type: "restaurant",
     data: {
+      url:fourth,
       type: "F",
       id: "664656",
       name: "Cheezylicious Cafe",

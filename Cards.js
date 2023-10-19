@@ -1,12 +1,13 @@
 import React from "react";
-import imagess from "./Images/kfc.jpeg";
+import { url } from "inspector";
 
 export default function Cards(props) {
+
   return (
     <div className="cards">
-      <img src={imagess}  width="100px"/>
-      <h3>{props.x}</h3>
-      <p>{props.c}</p>
+      <img src={props?.url} width="100px"/>
+      <h3>{props?.name}</h3>
+      <p>{props?.area}</p>
       
     </div>
   );
