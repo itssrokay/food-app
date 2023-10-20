@@ -26,6 +26,11 @@ To run this application locally, follow these steps:
    ```
    npm install
    ```
+4. Install web bundlers example Parcel
+   ```
+   npm install -D parcel
+   ```
+   
 
 ### Usage
 
