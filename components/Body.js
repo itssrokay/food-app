@@ -1,11 +1,22 @@
-import React from "react";
-// import imagess from "./Images/kfc.jpeg";
+import React, { useState } from "react";
 import Data from "./Data";
 import Cards from "./Cards";
 
 export default function Body() {
-  const elem = Data.map((item) => {
+  const [searchInput,setSearchInput]=useState("");
+  const[restaurants,setRestaurants]=useState(Data);
+
+  function filterRes(searchInput,restaurants){
+    const filterData=restaurants.filter((restaurant)=>
+    restaurant.data.name.includes(searchInput)
+    );
+    return filterData;
+   
+  }
+
+  const elem = restaurants.map((item) => {
     return (
+      <>
       <div className="dir">
         <Cards
           url={item.data?.url}
@@ -14,15 +25,36 @@ export default function Body() {
           area={item.data.area}
         />
       </div>
+      </>
     );
   });
-  return (
-    // <div className="cards" >
-    //    <img src={props.url} alt="food"  />
-    //    <h4>its name is {props.name}</h4>
-    //   <h3>its rating is {props.rating}</h3>
 
-    // </div>
+
+  
+
+  return (
+    <>
+    <div className="search-container">
+        <input
+         type="text"
+         className="search-input"
+         placeholder="Search"
+         value={searchInput}
+         onChange={(e)=>
+          setSearchInput(e.target.value)
+           }
+         />
+        
+         <button 
+         className="search-btn" 
+         onClick={()=>
+          {
+           const resultant= filterRes(searchInput,restaurants);
+           setRestaurants(resultant)
+          }
+          }>Bang</button>
+      </div>
     <div className="cards">{elem}</div>
+    </>
   );
 }
