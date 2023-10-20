@@ -1,20 +1,20 @@
 import React from "react";
-import imagess from "./Images/kfc.jpeg";
+// import imagess from "./Images/kfc.jpeg";
 import Data from "./Data";
 import Cards from "./Cards";
 
 export default function Body() {
   const elem = Data.map((item) => {
-    return( 
+    return (
       <div className="dir">
-    <Cards 
-    url={item.data?.url}
-    name={item.data.name} 
-    key={item.data.id} 
-    area={item.data.area}
-    />
-    </div>
-    )
+        <Cards
+          url={item.data?.url}
+          name={item.data.name}
+          key={item.data.id}
+          area={item.data.area}
+        />
+      </div>
+    );
   });
   return (
     // <div className="cards" >

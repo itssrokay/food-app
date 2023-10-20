@@ -1,11 +1,11 @@
 // RestaurantList is JSON Data for displaying cards
 // const restaurantList =
-import dominos from "./images/dominos.jpeg"
-import second from "./images/OIP.jpeg"
-import third from "./images/pizza pie.jpeg"
-import fourth from "./images/Richie rich.jpeg"
-import fifth from "./images/siddhi icecream.jpeg"
-import kfc from "./images/kfc.jpeg"
+import dominos from "../images/dominos.jpeg"
+import second from "../images/OIP.jpeg"
+import third from "../images/pizza pie.jpeg"
+import fourth from "../images/Richie rich.jpeg"
+import fifth from "../images/siddhi icecream.jpeg"
+import kfc from "../images/kfc.jpeg"
 export default [
   {
     type: "restaurant",
