@@ -1,6 +1,7 @@
 # Food Ordering App: Namaste React!
 
-<img width="950" alt="image" src="https://github.com/itssrokay/food-app/assets/100505778/2acfbbe2-a3e6-4be3-aa99-5e20f10b0798">
+<img width="800" alt="image" src="https://github.com/itssrokay/food-app/assets/100505778/d8daaa0d-626d-48fb-83d1-98209ec055b6">
+
 
 
 Welcome to our Food Ordering App! This application allows you to explore various restaurants and place orders for your favorite dishes.
