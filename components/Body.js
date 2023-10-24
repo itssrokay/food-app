@@ -25,6 +25,7 @@ newArray.push(...Data);
             name={item.data.name}
             key={item.data.id}
             area={item.data.area}
+            cuisines={item.data.cuisines}
           />
         </div>
       </>
