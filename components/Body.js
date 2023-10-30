@@ -4,20 +4,21 @@ import Cards from "./Cards";
 
 export default function Body() {
   const [searchInput, setSearchInput] = useState("");
-  const [restaurants, setRestaurants] = useState(Data);
-  const newArray = [];
-  newArray.push(...Data);
+  const [Allrestaurants, setAllrestraurants] = useState(Data);
+  const [Filteredrestaurants, setFullrestraurants] = useStat([]);
+  // const newArray = [];
+  // newArray.push(...Data);
   useEffect(() => {
     getRestra();
   },[]);
 
   async function getRestra(){
-    const da=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING")
+    const da=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/All/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING")
     const json=await da.json();
     console.log(json)
-    // setRestaurants(json?.data?.cards[2]?.data?.data?.cards)
+    // setAll(json?.data?.cards[2]?.data?.data?.cards)
   }
-console.log("rendi")
+  console.log("rendi")
   function filterRes(searchInput, newArray) {
     const filterData = newArray.filter((restaurant) =>
       restaurant.data.name.includes(searchInput)
@@ -25,7 +26,7 @@ console.log("rendi")
     return filterData;
   }
 
-  const elem = restaurants.map((item) => {
+  const elem = All.map((item) => {
     return (
       <>
         <div className="dir">
@@ -55,7 +56,7 @@ console.log("rendi")
           className="search-btn"
           onClick={() => {
             const resultant = filterRes(searchInput, newArray);
-            setRestaurants(resultant);
+            setAll(resultant);
           }}
         >
           Bang
