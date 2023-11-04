@@ -1,23 +1,30 @@
 import React, { useState, useEffect } from "react";
 import Data from "./Data";
 import Cards from "./Cards";
+import Shimmer from "./Shimmer";
 
 export default function Body() {
   const [searchInput, setSearchInput] = useState("");
-  const [restaurants, setRestaurants] = useState(Data);
+  const [restaurants, setRestaurants] = useState([]);
   const newArray = [];
   newArray.push(...Data);
-  useEffect(() => {
-    getRestra();
-  },[]);
 
-  async function getRestra(){
-    const da=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING")
-    const json=await da.json();
-    console.log(json)
-    // setRestaurants(json?.data?.cards[2]?.data?.data?.cards)
-  }
-console.log("rendi")
+  useEffect(()=>
+  setTimeout(function(){setRestaurants(Data)},1000)
+  ,[]);
+
+//   //for fetching data (link not working appropriately)
+//   useEffect(() => {
+//     getRestra();
+//   },[]);
+
+//   async function getRestra(){
+//     const da=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING")
+//     const json=await da.json();
+//     console.log(json)
+//     // setRestaurants(json?.data?.cards[2]?.data?.data?.cards)
+//   }
+// console.log("rendi")
   function filterRes(searchInput, newArray) {
     const filterData = newArray.filter((restaurant) =>
       restaurant.data.name.includes(searchInput)
@@ -41,7 +48,7 @@ console.log("rendi")
     );
   });
 
-  return (
+  return restaurants.length===0? <Shimmer/> :(
     <>
       <div className="search-container">
         <input
