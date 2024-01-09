@@ -17,9 +17,13 @@
   width: 100px;
 }
 .dir{
-  border: 2px solid black;
+  border: 2px solid grey;
   width: 150px;
   margin: 10px;
+}
+.dir:hover{
+  border: 3px solid black;
+  cursor: pointer;
 }
 .cards{
   display: flex;

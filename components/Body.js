@@ -7,9 +7,9 @@ export default function Body() {
   const [restaurants, setRestaurants] = useState(Data);
   const newArray = [];
   newArray.push(...Data);
-  useEffect(() => {
-    getRestra();
-  },[]);
+  // useEffect(() => {
+  //   getRestra();
+  // },[]);
 
   async function getRestra(){
     const da=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING")
@@ -29,13 +29,15 @@ console.log("rendi")
     return (
       <>
         <div className="dir">
-          <Cards
-            url={item?.data?.url}
-            name={item?.data?.name}
-            key={item?.data?.id}
-            area={item?.data?.area}
-            cuisines={item?.data?.cuisines}
-          />
+        {Data.map((restaurant) => {
+        return <Cards {...restaurant.data} key={restaurant.data.id} />;
+      })}
+            // url={item?.data?.url}
+            // name={item?.data?.name}
+            // key={item?.data?.id}
+            // area={item?.data?.area}
+            // cuisines={item?.data?.cuisines}
+          {/* /> */}
         </div>
       </>
     );
