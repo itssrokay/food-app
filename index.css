@@ -16,18 +16,21 @@
 .logo{
   width: 100px;
 }
-.dir{
+.cards{
   border: 2px solid grey;
-  width: 150px;
-  margin: 10px;
+  word-wrap: break-word;
+  width: 200px;
+  margin: 3px;
 }
-.dir:hover{
+.cards:hover{
   border: 3px solid black;
   cursor: pointer;
+  background-color: rgb(224, 220, 220);
 }
-.cards{
+.restaurant-list{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 5px;
+  
 }
