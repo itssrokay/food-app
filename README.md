@@ -1,6 +1,7 @@
 # Food Ordering App: Namaste React!
 
-<img width="800" alt="image" src="https://github.com/itssrokay/food-app/assets/100505778/d8daaa0d-626d-48fb-83d1-98209ec055b6">
+![image](https://github.com/itssrokay/food-app/assets/100505778/1438b600-5a23-4e1d-8aa0-b78094848053)
+
 
 
 
