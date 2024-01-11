@@ -3,9 +3,9 @@ import React from "react";
 
 export default function Cards({
   name,
-  cuisines,
+  avgRating,
   cloudinaryImageId,
-  lastMileTravelString,
+  areaName,
 }) {
 
   return (
@@ -20,8 +20,8 @@ export default function Cards({
       />
       {/* <img src={props?.url} width="100px"/> */}
       <h2>{name}</h2>
-      <h3>{cuisines.join(", ")}</h3>
-      <h4>{lastMileTravelString} minutes</h4>
+      <h3>{avgRating}</h3>
+      <h4>{areaName} minutes</h4>
       
     </div>
     </>
