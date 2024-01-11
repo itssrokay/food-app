@@ -20,6 +20,7 @@
   border: 2px solid grey;
   word-wrap: break-word;
   width: 200px;
+  height: 400px;
   margin: 3px;
 }
 .cards:hover{
@@ -32,5 +33,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 5px;
-  
+}
+
+.shimmer-card{
+  width: 200px;
+  height: 400px;
+  border: 1px solid black;
+  margin:3px;
+  background-color: #F0F0F0;
+}
+.shimmer-cointainer{
+  display: flex;
+  flex-wrap: wrap;
 }

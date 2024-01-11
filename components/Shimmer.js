@@ -1,5 +1,28 @@
 export default function Shimmer(){
   return(
-    <h2>Shimmer Ui loading</h2>
+    <div className="shimmer-cointainer">
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+    <div className="shimmer-card"></div>
+
+    </div>
   )
 }

@@ -6,6 +6,7 @@ export default function Cards({
   avgRating,
   cloudinaryImageId,
   areaName,
+  costForTwo,
 }) {
 
   return (
@@ -21,7 +22,8 @@ export default function Cards({
       {/* <img src={props?.url} width="100px"/> */}
       <h2>{name}</h2>
       <h3>{avgRating}</h3>
-      <h4>{areaName} minutes</h4>
+      <h3>{costForTwo}</h3>
+      <h4>{areaName}</h4>
       
     </div>
     </>
