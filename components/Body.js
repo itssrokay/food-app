@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Data from "./Data";
 import Cards from "./Cards";
 import Shimmer from "./Shimmer";
 
 export default function Body() {
   const [listofRes, setList] = useState([]);
+  const [allRes, setAllRes] = useState([]);
+  const [searchText, setSearchText] = useState("");
+
 
   useEffect(() => {
     console.log("useEffect before fetch");
@@ -24,6 +27,7 @@ export default function Body() {
             ?.restaurants;
         // Update the state with the fetched data
         setList(restaurants);
+        setAllRes(restaurants)
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -38,8 +42,14 @@ export default function Body() {
     let filteredRes = listofRes.filter((res) => res.info.avgRating > 4);
     setList(filteredRes);
   }
- //shimmer ui
-
+//search  functionality
+const searchResult = () => {
+  const filteredRes = allRes.filter(
+    (res) =>
+      res.info.name.toLowerCase().includes(searchText.toLowerCase())
+  );
+  setList(filteredRes);
+};
 
   return (
     listofRes.length === 0 ? (
@@ -47,6 +57,9 @@ export default function Body() {
     ) :
     <div className="body">
       <div className="filtered-res">
+        <input type="text" value={searchText} placeholder="search here.." onChange={(e)=>setSearchText(e.target.value)}
+        ></input>
+        <button onClick={searchResult}>Search</button>
         <button onClick={handleSort}>Sort Restaurants</button>
       </div>
       <div className="restaurant-list">
