@@ -10,6 +10,7 @@ import { createBrowserRouter,RouterProvider ,Outlet} from "react-router-dom";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Error from "./components/Error";
+import RestraMenu from "./components/RestraMenu";
 import { Link } from "react-router-dom";
 const App = () => {
   return (
@@ -27,7 +28,11 @@ const appRouter=createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<Body/>
+        element:(<>
+        <Body/>
+        <Footer/>
+        </>
+        )
       },
       {
         path:"/about",
@@ -36,7 +41,10 @@ const appRouter=createBrowserRouter([
       {
         path:"/contact",
         element:<Contact/>
-      },
+      },{
+        path:"/restra/:resId",
+        element:<RestraMenu/>
+      }
     ],
     errorElement:<Error/>,
   },

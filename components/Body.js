@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Data from "./Data";
 import Cards from "./Cards";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 export default function Body() {
   const [listofRes, setList] = useState([]);
@@ -15,8 +16,11 @@ export default function Body() {
     // Use a separate function to fetch data
     const fetchData = async () => {
       try {
-        const resData = await fetch(
-          "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.283007&lng=76.6476158&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        // const resData = await fetch(
+        //   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.283007&lng=76.6476158&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        // );
+        const resData=await fetch(
+          "https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING"
         );
         const json = await resData.json();
         console.log("Fetched Data:", json.data);
@@ -65,7 +69,7 @@ const searchResult = () => {
       <div className="restaurant-list">
         {Array.isArray(listofRes) &&
           listofRes.map((restaurant) => (
-            <Cards {...restaurant?.info} key={restaurant?.info?.id} />
+            <Link key={restaurant?.info?.id} to={"restra/"+restaurant?.info?.id}><Cards {...restaurant?.info}  /></Link>
           ))}
       </div>
     </div>
